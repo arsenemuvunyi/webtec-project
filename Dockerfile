@@ -13,5 +13,12 @@ RUN chmod +x ./mvnw
 # Build the application using Maven
 RUN ./mvnw clean install
 
+# Set environment variables (example for MySQL)
+ENV SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/Volkswagen
+ENV SPRING_DATASOURCE_USERNAME=root
+ENV SPRING_DATASOURCE_PASSWORD=12345
+ENV SPRING_JPA_HIBERNATE_DDL_AUTO=update
+ENV SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.MySQLDialect
+
 # Run the application
 CMD ["java", "-jar", "target/ecommerce-cars-0.0.1-SNAPSHOT.jar"]
