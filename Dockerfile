@@ -14,4 +14,4 @@ RUN chmod +x ./mvnw
 RUN ./mvnw clean install
 
 # Run the application
-CMD ["java", "-jar", "target/ecommerce-cars-1.0.0.jar"]
+CMD ["java", "-jar", "target/ecommerce-cars-0.0.1-SNAPSHOT.jar"]
